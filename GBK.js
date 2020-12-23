@@ -17,13 +17,7 @@ let j = 0;
           $(s2).each((index, item)=>{$href.push(item.attribs.href)});
           var splitWord = $href[j++].split("\'");
           musicNum[i] = splitWord[1];
+          console.log(tmp);
+          console.log("https://www.melon.com/song/detail.htm?songId=" + splitWord[1]);
      }
-
-     for(let i=1; i < musicNum.length; i++){
-       axios.get("https://www.melon.com/song/detail.htm?songId=" + musicNum[i])
-       .then(value =>{
-         const selector = "#d_video_summary";
-         const $ = cheerio.load(value.data);
-
-     });
-  });
+});
